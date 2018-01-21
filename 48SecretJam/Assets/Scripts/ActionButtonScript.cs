@@ -28,9 +28,16 @@ public class ActionButtonScript : MonoBehaviour {
 
     public void EmptyButton()
     {
+        if (item != null && item.name == "Meat")
+        {
+            LifeBarManager.instance.Increase(20);
+            Debug.Log(item.name);
+        }
+
         backGround.GetComponent<Image>().sprite = Slot_Empty;
         objectImage.GetComponent<Image>().enabled = false;
         objectImage.GetComponent<Image>().sprite = null;
         item = null;
+
     }
 }

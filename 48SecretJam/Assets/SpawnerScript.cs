@@ -9,6 +9,8 @@ public class SpawnerScript : MonoBehaviour {
     public int maxSpawn;
     public int spawnDelay;
 
+    public int deadCoyotes;
+
     private float timer;
     private float startTime;
 
@@ -28,7 +30,7 @@ public class SpawnerScript : MonoBehaviour {
             !GameObject.Find("InputManager").GetComponent<InputManager>().isBeginningRunning)
         {
             int tmp = Random.Range(0, spawners.Length);
-            coyotes.Add(Instantiate(coyotePrefab, spawners[tmp].transform.position, spawners[tmp].transform.rotation));
+            coyotes.Add(Instantiate(coyotePrefab, new Vector3(spawners[tmp].transform.position.x, spawners[tmp].transform.position.y, 0.01f*coyotes.Count), spawners[tmp].transform.rotation));
             startTime = timer;
         }
 	}
@@ -36,5 +38,6 @@ public class SpawnerScript : MonoBehaviour {
     public void removeCoyote(GameObject coyote)
     {
         coyotes.Remove(coyote);
+        deadCoyotes++;
     }
 }

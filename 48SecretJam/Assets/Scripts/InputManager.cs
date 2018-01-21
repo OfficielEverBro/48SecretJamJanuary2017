@@ -80,6 +80,7 @@ public class InputManager : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton2").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton2").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+            GameObject.Find("ActionButton2").GetComponent<ActionButtonScript>().EmptyButton();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -93,6 +94,7 @@ public class InputManager : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton3").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton3").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+            GameObject.Find("ActionButton3").GetComponent<ActionButtonScript>().EmptyButton();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
@@ -106,6 +108,7 @@ public class InputManager : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton4").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton4").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+            GameObject.Find("ActionButton4").GetComponent<ActionButtonScript>().EmptyButton();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha5))
@@ -119,6 +122,7 @@ public class InputManager : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+            GameObject.Find("ActionButton5").GetComponent<ActionButtonScript>().EmptyButton();
         }
     }
 }

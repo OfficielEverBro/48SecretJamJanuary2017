@@ -41,6 +41,7 @@ public class LifeBarManager : MonoBehaviour {
         if(remainingLife > MAX_LIFE_LEVEL)
         {
             remainingLife = MAX_LIFE_LEVEL;
+            Debug.Log(health);
         }
     }
 }

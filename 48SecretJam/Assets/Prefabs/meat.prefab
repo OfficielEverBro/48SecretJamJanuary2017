@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114700447967147362}
   - component: {fileID: 50072449008194720}
   - component: {fileID: 61471804077937756}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: meat
   m_TagString: ConsumableTag
   m_Icon: {fileID: 0}
