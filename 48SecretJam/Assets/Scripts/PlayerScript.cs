@@ -60,7 +60,7 @@ public class PlayerScript : MonoBehaviour {
             spriteRendererA.flipX = true;
             spriteRendererA.transform.localPosition = new Vector3(-0.6f,0.3f);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded)
             {
