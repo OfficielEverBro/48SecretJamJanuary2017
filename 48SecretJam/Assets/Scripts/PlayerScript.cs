@@ -75,14 +75,18 @@ public class PlayerScript : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
-            animatorA.SetBool("Attack", true);
+            //animatorA.SetTrigger("Attack");
+            if (!animatorA.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {
+                animatorA.Play("Attack");
+            }
         }
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
-            animatorA.SetBool("Attack", false);
+            //animatorA.SetBool("Attack", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
