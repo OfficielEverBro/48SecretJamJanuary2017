@@ -124,5 +124,9 @@ public class InputManager : MonoBehaviour {
             ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
             GameObject.Find("ActionButton5").GetComponent<ActionButtonScript>().EmptyButton();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
