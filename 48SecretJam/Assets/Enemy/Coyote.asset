@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e630bfd7093c74cbc47622b3c7ef0e, type: 3}
+  m_Name: Coyote
+  m_EditorClassIdentifier: 
+  name: Coyote
+  prefab: {fileID: 1874397948522586, guid: adbb9628b59021942a607533c59e89ea, type: 2}
+  damage: 20
+  life: 30
+  drops:
+  - {fileID: 11400000, guid: 87c0834965045a048a678a8cd700b16e, type: 2}

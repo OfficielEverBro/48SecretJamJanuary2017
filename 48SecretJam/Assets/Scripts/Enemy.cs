@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+[CreateAssetMenu(fileName = "New Enemy", menuName = "PNJ/Enemy")]
+public class Enemy : ScriptableObject
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    new public string name = "New Enemy";
+    public GameObject prefab = null;
+    public int damage = 0;
+    public int life = 0;
+    public Item[] drops;
+
 }
+
+

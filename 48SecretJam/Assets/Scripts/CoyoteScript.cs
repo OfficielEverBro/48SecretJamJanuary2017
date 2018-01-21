@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CoyoteScript : MonoBehaviour {
-
+    public Enemy CoyotePNJ;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     public float speed;
