@@ -10,5 +10,6 @@ public class InitNightScene : MonoBehaviour
         FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("GameTheme");
         LifeBarManager.instance.remainingLife = 100;
+        GameObject.Find("BeginningScript").GetComponent<BeginningScript>().Run();
     }
 }

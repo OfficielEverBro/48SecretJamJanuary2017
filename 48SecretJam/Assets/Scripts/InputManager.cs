@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour {
 
+    public bool isBeginningRunning = true;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,7 +13,10 @@ public class InputManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(isBeginningRunning)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
             GameObject.Find("Player").GetComponent<PlayerScript>().leftDown = true;
         if (Input.GetKeyDown(KeyCode.RightArrow))
