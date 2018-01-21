@@ -10,7 +10,7 @@ public class Enemy : ScriptableObject
     public GameObject prefab = null;
     public int damage = 0;
     public int life = 0;
-    public Item[] drops;
+    public GameObject[] drops;
 
 }
 

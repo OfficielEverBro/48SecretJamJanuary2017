@@ -52,12 +52,6 @@ public class EnemyScript : MonoBehaviour {
             StartCoroutine(FlashSprites());
         }
 
-        if(life <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-
-
         lifeBefore = life;
     }
 
@@ -72,6 +66,10 @@ public class EnemyScript : MonoBehaviour {
             yield return new WaitForSeconds(0.1f);
         }
         GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        if (life <= 0)
+        {
+            Drop();
+        }
     }
 
     private void ChangeDirection()
@@ -87,5 +85,14 @@ public class EnemyScript : MonoBehaviour {
             animator.SetBool("IsRunning", true);
         }
         timeToChangeDirection = 3f;
+    }
+
+    private void Drop()
+    {
+        if (Random.Range(0, 100) > 80 && enemyInfo.drops.Length>0)
+        {
+            GameObject drop = Instantiate(enemyInfo.drops[Random.Range(0, enemyInfo.drops.Length)], transform.position, transform.rotation);
+        }
+        Destroy(this.gameObject);
     }
 }

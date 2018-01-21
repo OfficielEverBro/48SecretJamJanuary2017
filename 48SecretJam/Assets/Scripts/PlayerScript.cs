@@ -13,8 +13,8 @@ public class PlayerScript : MonoBehaviour {
     public bool leftDown;
     public bool isGrounded;
 
-    public int life = 100;
     public int damage = 10;
+    public bool isDead = false;
 
     // Use this for initialization
     void Start()
@@ -31,6 +31,10 @@ public class PlayerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+        if (isDead)
+            LifeBarManager.instance.Decrease(100);
+
         if(rightDown || leftDown)
             animatorP.SetBool("IsRunning", true);
         else

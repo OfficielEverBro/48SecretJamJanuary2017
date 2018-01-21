@@ -16,4 +16,4 @@ MonoBehaviour:
   damage: 20
   life: 30
   drops:
-  - {fileID: 11400000, guid: 87c0834965045a048a678a8cd700b16e, type: 2}
+  - {fileID: 1647252865550746, guid: 0d8cd98f7c2a0704aa8581da98ae4d90, type: 2}
