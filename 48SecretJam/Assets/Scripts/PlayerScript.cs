@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -11,6 +12,9 @@ public class PlayerScript : MonoBehaviour {
     public bool rightDown;
     public bool leftDown;
     public bool isGrounded;
+
+    public int life = 100;
+    public int damage = 10;
 
     // Use this for initialization
     void Start()
@@ -63,6 +67,11 @@ public class PlayerScript : MonoBehaviour {
         if (!animatorA.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             animatorA.Play("Attack");
+        }
+        List<EnemyScript> e = GetComponentInChildren<PlayerAttack>().enemyList;
+        foreach (EnemyScript enemy in e)
+        {
+            enemy.life -= damage;
         }
     }
 

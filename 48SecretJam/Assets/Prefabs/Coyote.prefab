@@ -146,9 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b08d9b24baf5cd459087ce8e287ea14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoyotePNJ: {fileID: 11400000, guid: f019ddf9a048dfc40b492719aea161d1, type: 2}
+  enemyInfo: {fileID: 11400000, guid: f019ddf9a048dfc40b492719aea161d1, type: 2}
   speed: 1
   IsRunning: 0
+  damage: 0
+  life: 0
 --- !u!212 &212184586081838852
 SpriteRenderer:
   m_ObjectHideFlags: 1
