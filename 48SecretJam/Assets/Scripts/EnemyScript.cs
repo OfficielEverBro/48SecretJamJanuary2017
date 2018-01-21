@@ -68,6 +68,7 @@ public class EnemyScript : MonoBehaviour {
         GetComponentInChildren<SpriteRenderer>().color = Color.white;
         if (life <= 0)
         {
+            AudioManager.instance.Play("Die");
             Drop();
         }
     }
