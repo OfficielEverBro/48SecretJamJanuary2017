@@ -20,6 +20,7 @@ public class BeginningScript : MonoBehaviour {
             AudioManager.instance.Play("SandWalk");
             i--;
         }
+            yield return new WaitForSeconds(2);
         AudioManager.instance.Stop("SandWalk");
         GameObject.Find("InputManager").GetComponent<InputManager>().isBeginningRunning = false;
     }
