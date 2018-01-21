@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 304208652}
   - component: {fileID: 304208651}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Init
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2879,8 +2879,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Day
+  - name: DayTheme
     clip: {fileID: 8300000, guid: 67c7711bfbf9b9c4e88ae9599d8fe5a2, type: 3}
+    volume: 0.509
+    pitch: 1.46
+    loop: 1
+    source: {fileID: 0}
+  - name: NightTheme
+    clip: {fileID: 8300000, guid: a56e243947fa8a542bc3bb56eb57095e, type: 3}
     volume: 0.509
     pitch: 1.46
     loop: 1
