@@ -9,5 +9,7 @@ public class InitNightScene : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().StopAll();
         FindObjectOfType<AudioManager>().Play("NightTheme");
+
+        LifeBarManager.instance.remainingLife = 100;
     }
 }

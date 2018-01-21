@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4541335632230322}
   - component: {fileID: 212184586081838852}
   - component: {fileID: 95125019998999070}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: CoyoteSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 50455442860352928}
   - component: {fileID: 61389608014922668}
   - component: {fileID: 114791970872723508}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Coyote
   m_TagString: Enemy
   m_Icon: {fileID: 0}

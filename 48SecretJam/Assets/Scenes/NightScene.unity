@@ -935,48 +935,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1001 &220078117
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.9317412
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.6000707
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461408637899692, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: adbb9628b59021942a607533c59e89ea, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &244039152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,7 +2527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b15b81534965944aa4322e02760638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingLife: 50
+  remainingLife: 100
 --- !u!4 &965240065
 Transform:
   m_ObjectHideFlags: 0
