@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LifeBarManager : MonoBehaviour {
 
@@ -27,9 +28,10 @@ public class LifeBarManager : MonoBehaviour {
     public void Decrease(float damages)
     {
         remainingLife -= damages;
-        if(damages < 0f)
+        if(remainingLife < 0f)
         {
             // todo:  end game stuff
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

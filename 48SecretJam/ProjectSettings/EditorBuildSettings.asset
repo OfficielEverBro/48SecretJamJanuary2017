@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NightScene.unity
     guid: 6bbc74503b7f8fd468da2a158e804c10
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: c57659b5d11c37448aa80d4a4978c118
