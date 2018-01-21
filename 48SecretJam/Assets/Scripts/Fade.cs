@@ -30,9 +30,4 @@ public class Fade : MonoBehaviour {
         fadeDir = direction;
         return fadeSpeed;
     }
-
-    private void OnLevelWasLoaded(int level)
-    {
-        BeginFade(FADE_OUT);
-    }
 }
