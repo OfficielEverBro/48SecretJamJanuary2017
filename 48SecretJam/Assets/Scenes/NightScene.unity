@@ -719,7 +719,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 188550088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 188550090}
+        m_MethodName: EmptyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &188550088
@@ -859,7 +870,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 204638934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.29, y: -1.68, z: 0}
+  m_LocalPosition: {x: -7.21, y: -1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927785059}
@@ -1358,7 +1369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4129862811381704, guid: 4e4abdd10d33d314ebdcd2b4d17a2856, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1556747535189766, guid: 4e4abdd10d33d314ebdcd2b4d17a2856, type: 2}
       propertyPath: m_TagString
@@ -1474,7 +1485,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 376224829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 376224831}
+        m_MethodName: EmptyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &376224829
@@ -1549,7 +1571,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 490652437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.74, y: -1.6799998, z: 0}
+  m_LocalPosition: {x: 11.61, y: -1.6799998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927785059}
@@ -2664,7 +2686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b15b81534965944aa4322e02760638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingLife: 100
+  remainingLife: 80
 --- !u!4 &965240065
 Transform:
   m_ObjectHideFlags: 0
@@ -3594,8 +3616,7 @@ MonoBehaviour:
     type: 2}
   maxSpawn: 5
   spawnDelay: 5
-  timer: 0
-  startTime: 0
+  deadCoyotes: 0
   spawners:
   - {fileID: 751083105}
   - {fileID: 185340680}
@@ -8007,7 +8028,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1710593739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1710593741}
+        m_MethodName: EmptyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1710593739
@@ -8058,7 +8090,7 @@ MonoBehaviour:
   objectImage: {fileID: 1067406797}
   Slot_Empty: {fileID: 21300004, guid: 7e2196c3d3a8cad4189ddef2d3ee259f, type: 3}
   Slot_Full: {fileID: 21300020, guid: 7e2196c3d3a8cad4189ddef2d3ee259f, type: 3}
-  item: {fileID: 11400000, guid: 1ed899d0005459e4ca3f3bfdfb18e514, type: 2}
+  item: {fileID: 0}
 --- !u!1 &1719206665
 GameObject:
   m_ObjectHideFlags: 0
@@ -8333,7 +8365,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0077195168, y: 0.071088076}
+  m_Offset: {x: -0.017889977, y: 0.071088076}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8344,7 +8376,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.01373, y: 1.0203795}
+  m_Size: {x: 18.420961, y: 1.0203795}
   m_EdgeRadius: 0
 --- !u!1 &1781403185
 GameObject:
@@ -8451,7 +8483,7 @@ Transform:
   - {fileID: 974087882}
   - {fileID: 1516177216}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857024493
 GameObject:
@@ -12585,7 +12617,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2082939391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2082939393}
+        m_MethodName: EmptyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2082939391

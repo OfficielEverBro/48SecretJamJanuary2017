@@ -14,20 +14,53 @@ public class EnemyScript : MonoBehaviour {
     public int life = 0;
     private int lifeBefore;
 
+
+    private GameObject player;
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        ChangeDirection();
+        //ChangeDirection();
         speed = 0.75f;
         damage = enemyInfo.damage;
         life = enemyInfo.life;
         lifeBefore = life;
-}
+        player = GameObject.Find("Player");
+
+        IsRunning = true;
+        speed = speed * -1;
+        animator.SetBool("IsRunning", true);
+    }
 
     public void Update()
     {
-        timeToChangeDirection -= Time.deltaTime;
+
+        //timeToChangeDirection -= Time.deltaTime;
+
+        if (speed > 0)
+        {
+            if (player.transform.position.x > gameObject.transform.position.x)
+            {
+                speed = speed * 1;
+            }
+            else
+            {
+                speed = speed * -1;
+            }
+        }
+        else
+        {
+            if (player.transform.position.x > gameObject.transform.position.x)
+            {
+                speed = speed * -1;
+            }
+            else
+            {
+                speed = speed * 1;
+            }
+        }
+
 
         if (speed < 0)
         {
@@ -39,10 +72,10 @@ public class EnemyScript : MonoBehaviour {
         }
 
 
-        if (timeToChangeDirection <= 0)
+        /*if (timeToChangeDirection <= 0)
         {
             ChangeDirection();
-        }
+        }*/
 
         if(IsRunning)
             transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -95,5 +128,13 @@ public class EnemyScript : MonoBehaviour {
         }
         GameObject.Find("Spawner_Coyote").GetComponent<SpawnerScript>().removeCoyote(this.gameObject);
         Destroy(this.gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerTag")
+        {
+            LifeBarManager.instance.Decrease(enemyInfo.damage);
+        }
     }
 }
