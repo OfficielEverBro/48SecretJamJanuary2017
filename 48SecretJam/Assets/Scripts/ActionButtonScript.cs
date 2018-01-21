@@ -23,6 +23,7 @@ public class ActionButtonScript : MonoBehaviour {
         objectImage.GetComponent<Image>().sprite = item.icon;
         objectImage.GetComponent<Image>().enabled = true;
         this.item = item;
+        Debug.Log("Picked " + item.name);
     }
 
     public void EmptyButton()

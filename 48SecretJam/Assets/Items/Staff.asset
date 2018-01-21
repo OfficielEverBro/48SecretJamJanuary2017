@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Staff
   icon: {fileID: 21300008, guid: a07c5761016fb5a4688c839c7e20dd73, type: 3}
-  isConsumable: 1
+  isConsumable: 0
