@@ -33,7 +33,11 @@ public class PlayerScript : MonoBehaviour {
     {
 
         if (isDead)
-            LifeBarManager.instance.Decrease(100);
+        {
+            isDead = false;
+            LifeBarManager.instance.Decrease(10);
+            animatorP.Play("Fall");
+        }
 
         if(rightDown || leftDown)
             animatorP.SetBool("IsRunning", true);
