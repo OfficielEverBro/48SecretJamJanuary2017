@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
 
     private bool rightDown;
     private bool leftDown;
+    public bool isGrounded;
 
     // Use this for initialization
     void Start()
@@ -20,6 +21,7 @@ public class PlayerScript : MonoBehaviour {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rightDown = false;
         leftDown = false;
+        isGrounded = false;
     }
 
     // Update is called once per frame
@@ -49,6 +51,14 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.Translate(Vector2.right * -speed * Time.deltaTime);
             spriteRenderer.flipX = true;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (isGrounded)
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+                isGrounded = false;
+            }
         }
 
 
@@ -115,6 +125,14 @@ public class PlayerScript : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "GroundTag")
+        {
+            isGrounded = true;
         }
     }
 }
