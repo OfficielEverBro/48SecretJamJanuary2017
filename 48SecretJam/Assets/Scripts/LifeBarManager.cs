@@ -28,7 +28,7 @@ public class LifeBarManager : MonoBehaviour {
     public void Decrease(float damages)
     {
         remainingLife -= damages;
-        if(remainingLife < 0f)
+        if(remainingLife <= 0f)
         {
             // todo:  end game stuff
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

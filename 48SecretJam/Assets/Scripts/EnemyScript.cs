@@ -93,6 +93,7 @@ public class EnemyScript : MonoBehaviour {
         {
             GameObject drop = Instantiate(enemyInfo.drops[Random.Range(0, enemyInfo.drops.Length)], transform.position, transform.rotation);
         }
+        GameObject.Find("Spawner_Coyote").GetComponent<SpawnerScript>().removeCoyote(this.gameObject);
         Destroy(this.gameObject);
     }
 }
