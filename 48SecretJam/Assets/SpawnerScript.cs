@@ -24,7 +24,8 @@ public class SpawnerScript : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime;
         int seconds = System.Convert.ToInt32(timer % 60);
-        if (timer - startTime >= spawnDelay && coyotes.Count<maxSpawn)
+        if ((timer - startTime >= spawnDelay && coyotes.Count<maxSpawn) && 
+            !GameObject.Find("InputManager").GetComponent<InputManager>().isBeginningRunning)
         {
             int tmp = Random.Range(0, spawners.Length);
             coyotes.Add(Instantiate(coyotePrefab, spawners[tmp].transform.position, spawners[tmp].transform.rotation));
