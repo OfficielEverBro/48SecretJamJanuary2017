@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114791970872723508}
   m_Layer: 10
   m_Name: Coyote
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b08d9b24baf5cd459087ce8e287ea14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoyotePNJ: {fileID: 11400000, guid: f019ddf9a048dfc40b492719aea161d1, type: 2}
   speed: 1
   IsRunning: 0
 --- !u!212 &212184586081838852
