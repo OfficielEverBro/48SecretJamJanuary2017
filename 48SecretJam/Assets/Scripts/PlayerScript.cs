@@ -13,7 +13,6 @@ public class PlayerScript : MonoBehaviour {
     public bool leftDown;
     public bool isGrounded;
 
-    public int life = 100;
     public int damage = 10;
 
     // Use this for initialization
@@ -31,6 +30,7 @@ public class PlayerScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
         if(rightDown || leftDown)
             animatorP.SetBool("IsRunning", true);
         else
