@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
@@ -53,24 +54,67 @@ public class PlayerScript : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
-            Debug.Log("test");
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
         }
+        if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton2").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton2").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
         }
+        if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton2").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton2").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton3").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton3").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
         }
+        if (Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton3").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton3").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton4").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton4").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
         }
+        if (Input.GetKeyUp(KeyCode.Alpha4))
+        {
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton4").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton4").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
+        }
+        if (Input.GetKeyUp(KeyCode.Alpha5))
+        {
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
+            ExecuteEvents.Execute(GameObject.Find("ActionButton5").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
         }
     }
 }
