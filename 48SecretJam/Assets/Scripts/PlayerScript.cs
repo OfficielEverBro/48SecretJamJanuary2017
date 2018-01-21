@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour {
     private Animator animatorA;
     private Animator animatorP;
     private SpriteRenderer spriteRendererP;
+    private SpriteRenderer spriteRendererA;
     public float speed = 0f;
 
     private bool rightDown;
@@ -20,6 +21,7 @@ public class PlayerScript : MonoBehaviour {
     {
         animatorA = GameObject.Find("attack").GetComponentInChildren<Animator>();
         animatorP = GameObject.Find("PlayerSprite").GetComponentInChildren<Animator>();
+        spriteRendererA = GameObject.Find("attack").GetComponentInChildren<SpriteRenderer>();
         spriteRendererP = GameObject.Find("PlayerSprite").GetComponentInChildren<SpriteRenderer>();
         rightDown = false;
         leftDown = false;
@@ -48,11 +50,15 @@ public class PlayerScript : MonoBehaviour {
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             spriteRendererP.flipX = false;
+            spriteRendererA.flipX = false;
+            spriteRendererA.transform.localPosition = new Vector3(0.6f, 0.3f);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector2.right * -speed * Time.deltaTime);
             spriteRendererP.flipX = true;
+            spriteRendererA.flipX = true;
+            spriteRendererA.transform.localPosition = new Vector3(-0.6f,0.3f);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
