@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -49,11 +50,27 @@ public class PlayerScript : MonoBehaviour {
             spriteRenderer.flipX = true;
         }
 
-        /*if (Input.GetKey(KeyCode.A))
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            //wind
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(1,0) * speed);
-        }*/
-        
+            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+            Debug.Log("test");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            GameObject.Find("ActionButton1").GetComponent<Button>().onClick.Invoke();
+        }
     }
 }

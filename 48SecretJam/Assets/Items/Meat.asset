@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07e3502a7ed88be4294b72bca2e721fc, type: 3}
-  m_Name: Knife
+  m_Name: Meat
   m_EditorClassIdentifier: 
-  name: Knife
-  icon: {fileID: 21300006, guid: a07c5761016fb5a4688c839c7e20dd73, type: 3}
-  isConsumable: 0
+  name: Meat
+  icon: {fileID: 21300030, guid: a07c5761016fb5a4688c839c7e20dd73, type: 3}
+  isConsumable: 1
