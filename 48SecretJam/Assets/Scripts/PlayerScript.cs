@@ -63,6 +63,7 @@ public class PlayerScript : MonoBehaviour {
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
             isGrounded = false;
+            AudioManager.instance.Stop("SandWalk");
         }
     }
 
@@ -73,6 +74,8 @@ public class PlayerScript : MonoBehaviour {
             animatorA.Play("Attack");
         }
         List<EnemyScript> e = GetComponentInChildren<PlayerAttack>().enemyList;
+        AudioManager.instance.Stop("Hit");
+        AudioManager.instance.Play("Hit");
         foreach (EnemyScript enemy in e)
         {
             enemy.life -= damage;
@@ -84,6 +87,7 @@ public class PlayerScript : MonoBehaviour {
         if (collision.gameObject.tag == "GroundTag")
         {
             isGrounded = true;
+            AudioManager.instance.Stop("SandWalk");
         }
     }
 }

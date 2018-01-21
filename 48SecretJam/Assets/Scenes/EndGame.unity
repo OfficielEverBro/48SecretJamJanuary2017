@@ -474,15 +474,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &427299783
+--- !u!1 &738699911
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 427299785}
-  - component: {fileID: 427299784}
+  - component: {fileID: 738699913}
+  - component: {fileID: 738699912}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -490,43 +490,61 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &427299784
+--- !u!114 &738699912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427299783}
+  m_GameObject: {fileID: 738699911}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f25b3edf2d7b79e4eac5e80f63e0ca35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: NightTheme
+  - name: EndGameTheme
     clip: {fileID: 8300000, guid: a56e243947fa8a542bc3bb56eb57095e, type: 3}
     volume: 0.474
-    pitch: 1.51
-    loop: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: MenuTheme
     clip: {fileID: 8300000, guid: bb77cb503a133b6418f0fbde61855b97, type: 3}
     volume: 0.456
-    pitch: 1.41
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: FinalTheme
+  - name: GameTheme
     clip: {fileID: 8300000, guid: 187ea751149eed048ab689b648ae7a09, type: 3}
     volume: 0.486
-    pitch: 1.53
+    pitch: 1
     loop: 1
     source: {fileID: 0}
---- !u!4 &427299785
+  - name: SandWalk
+    clip: {fileID: 8300000, guid: 503b47016ab33e544a8836077c18c601, type: 3}
+    volume: 0.202
+    pitch: 1.11
+    loop: 1
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 76d51d5543f344d4fa67d7560b2c23a2, type: 3}
+    volume: 0.202
+    pitch: 1.11
+    loop: 0
+    source: {fileID: 0}
+  - name: Die
+    clip: {fileID: 8300000, guid: a70464f99209b8d4383a18164e45aa4c, type: 3}
+    volume: 0.202
+    pitch: 1.11
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &738699913
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 427299783}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 738699911}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 401.39996, y: 183.225, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

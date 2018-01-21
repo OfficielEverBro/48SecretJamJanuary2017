@@ -8,7 +8,7 @@ public class EndGameControler : MonoBehaviour {
 	void Start ()
     {
         AudioManager.instance.StopAll();
-        AudioManager.instance.Play("NightTheme");
+        AudioManager.instance.Play("EndGameTheme");
 	}
 
     public void OnButtonClicked()
