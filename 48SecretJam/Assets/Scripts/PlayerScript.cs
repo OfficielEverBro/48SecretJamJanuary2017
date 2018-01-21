@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
 
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    private Animator animatorA;
+    private Animator animatorP;
+    private SpriteRenderer spriteRendererP;
+    private SpriteRenderer spriteRendererA;
     public float speed = 0f;
 
     private bool rightDown;
@@ -17,8 +19,10 @@ public class PlayerScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animatorA = GameObject.Find("attack").GetComponentInChildren<Animator>();
+        animatorP = GameObject.Find("PlayerSprite").GetComponentInChildren<Animator>();
+        spriteRendererA = GameObject.Find("attack").GetComponentInChildren<SpriteRenderer>();
+        spriteRendererP = GameObject.Find("PlayerSprite").GetComponentInChildren<SpriteRenderer>();
         rightDown = false;
         leftDown = false;
         isGrounded = false;
@@ -38,19 +42,23 @@ public class PlayerScript : MonoBehaviour {
             leftDown = false;
 
         if(rightDown || leftDown)
-            animator.SetBool("IsRunning", true);
+            animatorP.SetBool("IsRunning", true);
         else
-            animator.SetBool("IsRunning", false);
+            animatorP.SetBool("IsRunning", false);
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            spriteRenderer.flipX = false;
+            spriteRendererP.flipX = false;
+            spriteRendererA.flipX = false;
+            spriteRendererA.transform.localPosition = new Vector3(0.6f, 0.3f);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector2.right * -speed * Time.deltaTime);
-            spriteRenderer.flipX = true;
+            spriteRendererP.flipX = true;
+            spriteRendererA.flipX = true;
+            spriteRendererA.transform.localPosition = new Vector3(-0.6f,0.3f);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -67,12 +75,14 @@ public class PlayerScript : MonoBehaviour {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerEnterHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerDownHandler);
+            animatorA.SetBool("Attack", true);
         }
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             PointerEventData pointer = new PointerEventData(EventSystem.current);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerUpHandler);
             ExecuteEvents.Execute(GameObject.Find("ActionButton1").GetComponent<Button>().gameObject, pointer, ExecuteEvents.pointerExitHandler);
+            animatorA.SetBool("Attack", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
