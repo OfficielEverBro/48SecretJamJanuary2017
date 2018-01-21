@@ -8,6 +8,6 @@ public class InitNightScene : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<AudioManager>().StopAll();
-        FindObjectOfType<AudioManager>().Play("NightTheme");
+        FindObjectOfType<AudioManager>().Play("GameTheme");
     }
 }

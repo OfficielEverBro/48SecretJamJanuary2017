@@ -17,17 +17,31 @@ public class InputManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.RightArrow))
             GameObject.Find("Player").GetComponent<PlayerScript>().rightDown = true;
         if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
             GameObject.Find("Player").GetComponent<PlayerScript>().rightDown = false;
+            AudioManager.instance.Stop("SandWalk");
+        }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
             GameObject.Find("Player").GetComponent<PlayerScript>().leftDown = false;
+            AudioManager.instance.Stop("SandWalk");
+        }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             GameObject.Find("Player").GetComponent<PlayerScript>().PlayerMoveRight();
+            if (GameObject.Find("Player").GetComponent<PlayerScript>().isGrounded)
+            {
+                AudioManager.instance.Play("SandWalk");
+            }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             GameObject.Find("Player").GetComponent<PlayerScript>().PlayerMoveLeft();
+            if (GameObject.Find("Player").GetComponent<PlayerScript>().isGrounded)
+            {
+                AudioManager.instance.Play("SandWalk");
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
